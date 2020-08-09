@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список Авторов</title>
+</head>
+<body>
+    <a href="/">Домой</a>
+    <ul>
+        {% for author in object_list %}
+            <li><a href="{{author.id}}/">{{ author.id }}: {{ author.full_name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="/author/create/">Создать нового автора</a>
+    <a href="/author/create_many/">Создать несколько авторов</a>
+</body>
+</html>

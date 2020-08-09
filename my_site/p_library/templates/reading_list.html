@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Сейчас читают</title>
+</head>
+<body>
+    <a href="/">Домой</a>
+    <h2>В настоящее время читают:</h2>
+    <ul>
+        {% for reading in object_list %}
+            <li>
+                <a href="{{reading.id}}/">{{ reading.id }}: Друг {{ reading.friend.name }} читает: {{ reading.book }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/reading/create/">Создать</a>
+</body>
+</html>
